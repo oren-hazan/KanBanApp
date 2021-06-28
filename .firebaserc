@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "myfamilygame-a8c03": {
+      "hosting": {
+        "kan-ban-app": [
+          "myfamilygame-a8c03"
+        ]
+      }
+    }
+  }
+}
