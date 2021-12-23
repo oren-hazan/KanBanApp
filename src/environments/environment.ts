@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  firebase : {
+  firebase: {
     apiKey: "AIzaSyDVLiql_wbgoY6qvJg4hbrOd2ZVOcFS_D0",
     authDomain: "myfamilygame-a8c03.firebaseapp.com",
     projectId: "myfamilygame-a8c03",

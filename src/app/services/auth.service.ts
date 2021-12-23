@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Injectable } from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/auth';
 import firebase from 'firebase/app';
@@ -30,11 +31,8 @@ export class AuthService {
                  const provider = new firebase.auth.GithubAuthProvider();
                  return this.angularFireAuth.signInWithPopup(provider);
                }
-               logOut() {
-                 return this.angularFireAuth.signOut();
-               }
-
-               createUserDoc(authUser: { uid: any; ui: any; displayName: any; email: any; photoUtl: any; }):any {
+               
+               createUserDoc(authUser):any {
                  return this.angularFirestore.doc(`users/${authUser.uid}`).set({
                    uid: authUser.ui,
                    name: authUser.displayName,
@@ -48,4 +46,8 @@ export class AuthService {
                    }
                  });
                }
+               logOut() {
+                return this.angularFireAuth.signOut();
+              }
+
 }

@@ -127,12 +127,12 @@ async saveData(task?: string | undefined) {
       this.autoSaveTimer = 0;
     }
   }
-    await this.coreService.saveBoard(this.user.uid, this.kanbanBoard);
+    await this.coreService.saveBoard(this.user!.uid, this.kanbanBoard);
     this.snackBar.open('Saved Successfully!', 'Done', { duration: 3000 });
 }
 
 removeItem(taskColumn: any, task: any) {
-  this.coreService.removeTask(this.user.uid, taskColumn, task);
+  this.coreService.removeTask(this.user!.uid, taskColumn, task);
 }
 
 
